@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class InputManager : MonoBehaviour
 {
     public UnityEvent<Vector3> OnMove = new UnityEvent<Vector3>();
-    [SerializeField] private bool onFloor = true;
+    private bool onGround = true;
 
     // Update is called once per frame
     void Update()
@@ -31,10 +31,10 @@ public class InputManager : MonoBehaviour
         }
 
         float jump = 0f;
-        if (Input.GetKey(KeyCode.Space) && onFloor)
+        if (Input.GetKey(KeyCode.Space) && onGround)
         {
             jump = 60f;
-            onFloor = false;
+            onGround = false;
         }
 
         // Create a 3D version of the 2D input vector
@@ -46,9 +46,10 @@ public class InputManager : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Floor")
+        if (collision.gameObject.name == "Ground")
         {
-            onFloor = true;
+            onGround = true;
+            Debug.Log("Landed");
         }
     }
 }

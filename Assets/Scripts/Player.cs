@@ -13,8 +13,6 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    // This is similar to our code from our Roll-A-Ball tutorial
-    // Only difference being, we only listen to Left and Right inputs
     private void MovePlayer(Vector3 moveDirection)
     {
         rb.AddForce(speed * moveDirection);
