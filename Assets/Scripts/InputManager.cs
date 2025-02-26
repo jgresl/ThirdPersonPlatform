@@ -46,10 +46,9 @@ public class InputManager : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Ground")
+        if (collision.gameObject.CompareTag("Ground"))
         {
             onGround = true;
-            Debug.Log("Landed");
         }
     }
 }
