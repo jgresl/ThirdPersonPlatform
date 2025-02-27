@@ -1648,6 +1648,7 @@ MonoBehaviour:
   OnMove:
     m_PersistentCalls:
       m_Calls: []
+  freeLookCamera: {fileID: 670663013}
 --- !u!1001 &2877431912991527261
 PrefabInstance:
   m_ObjectHideFlags: 0
