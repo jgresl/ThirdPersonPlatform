@@ -6,6 +6,7 @@ public class InputManager : MonoBehaviour
 {
     public UnityEvent<Vector3> OnMove = new UnityEvent<Vector3>();
     private bool onGround = true;
+    public float jumpInput = 50f;
 
     [SerializeField] private CinemachineCamera freeLookCamera;
 
@@ -16,19 +17,19 @@ public class InputManager : MonoBehaviour
         Vector2 inputVector = Vector2.zero;
 
         // Get user input
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) && onGround)
         {
             inputVector += Vector2.up;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) && onGround)
         {
             inputVector += Vector2.down;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && onGround)
         {
             inputVector += Vector2.right;
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) && onGround)
         {
             inputVector += Vector2.left;
         }
@@ -36,7 +37,7 @@ public class InputManager : MonoBehaviour
         float jump = 0f;
         if (Input.GetKey(KeyCode.Space) && onGround)
         {
-            jump = 60f;
+            jump = jumpInput;
             onGround = false;
         }
 

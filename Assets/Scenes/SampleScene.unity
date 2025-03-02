@@ -2313,7 +2313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputManager: {fileID: 2014020777}
-  speed: 10
+  speed: 7
 --- !u!54 &2014020775
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2379,6 +2379,7 @@ MonoBehaviour:
   OnMove:
     m_PersistentCalls:
       m_Calls: []
+  jumpInput: 50
   freeLookCamera: {fileID: 670663013}
 --- !u!1001 &2106677298
 PrefabInstance:
@@ -2483,6 +2484,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2561235140404095111, guid: 34551ee15b59ca440b41d5dc2df17c4e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4993196002093967214, guid: 34551ee15b59ca440b41d5dc2df17c4e, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8336882825818098927, guid: 34551ee15b59ca440b41d5dc2df17c4e, type: 3}

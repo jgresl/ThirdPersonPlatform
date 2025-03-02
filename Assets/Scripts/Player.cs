@@ -15,6 +15,6 @@ public class Player : MonoBehaviour
 
     private void MovePlayer(Vector3 moveDirection)
     {
-        rb.AddForce(speed * moveDirection);
+        rb.AddForce(speed * moveDirection, ForceMode.Acceleration);
     }
 }
