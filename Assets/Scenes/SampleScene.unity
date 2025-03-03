@@ -2313,7 +2313,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputManager: {fileID: 2014020777}
-  speed: 7
 --- !u!54 &2014020775
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2379,7 +2378,11 @@ MonoBehaviour:
   OnMove:
     m_PersistentCalls:
       m_Calls: []
-  jumpInput: 50
+  OnJump:
+    m_PersistentCalls:
+      m_Calls: []
+  jumpInput: 5
+  speedInput: 15
   freeLookCamera: {fileID: 670663013}
 --- !u!1001 &2106677298
 PrefabInstance:
